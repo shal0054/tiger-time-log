@@ -1,0 +1,56 @@
+body {
+  display: flex;
+  margin: 0;
+}
+
+#login-mobile-side {
+  flex: 1;
+  border: 0.1rem solid gray;
+  padding-top: 2rem;
+  
+}
+
+#login-logo-mobile {
+  padding-left: 3rem;
+}
+
+p {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+}
+
+#forgot-password {
+  text-align: right;
+  margin-top: 0.2rem;
+}
+
+button {
+  background-color: #FFF201;
+  border: none;
+  border-radius: 12px;
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: 520;
+  margin: 1.2rem 1.5rem;
+  height: 3rem;
+}
+
+#login-desktop-side {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+#dt-header-logo {
+  max-width: 100%;
+  margin: 0;
+}
+
+#login-image {
+  margin: auto;
+}
