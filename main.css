@@ -61,6 +61,15 @@ button {
   box-shadow: 0 1rem 3rem rgba(191, 192, 16, 0.6);
 }
 
+button:hover {
+  scale: 1.05;
+}
+
+button:active {
+  background-color: #eee203;
+  scale: 1;
+}
+
 #login-desktop-side {
   display: flex;
   flex-direction: column;
