@@ -6,6 +6,7 @@ body {
 #login-mobile-side {
   flex: 1;
   border: 0.1rem solid gray;
+  height: 100vh;
   
 }
 
@@ -16,7 +17,7 @@ body {
 
 p {
   text-align: center;
-  font-size: 1.618rem;
+  font-size: 1.8rem;
 }
 
 form {
@@ -24,28 +25,45 @@ form {
   flex-direction: column;
   padding: 1.2rem 3rem;
 }
+label {
+  font-size: x-large;
+}
 
-#prepend {
+input {
+  height: 4rem;
+}
+
+#usernamePrepend {
   background-color: #FFF201;
+  height: 4rem;
+  font-size: x-large;
+}
+
+#passwordPrepend {
+  background-color: #FFF201;
+  height: 4rem;
+  width: 4rem;
 }
 
 #forgot-password {
   text-align: right;
-  margin: 0.3rem 0;
+  margin: 1rem 0;
+  font-size: larger;
 }
 
 button {
   background-color: #FFF201;
   border: none;
-  font-weight: 660;
-  height: 3.6rem;
-  box-shadow: 0 1rem 3rem rgba(141, 132, 6, 0.6);
+  font-weight: 550;
+  height: 4rem;
+  box-shadow: 0 1rem 3rem rgba(191, 192, 16, 0.6);
 }
 
 #login-desktop-side {
   display: flex;
   flex-direction: column;
   flex: 1.618;
+  height: 100vh;
 }
 
 #dt-header-logo {
