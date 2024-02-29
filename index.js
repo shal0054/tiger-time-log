@@ -1,23 +1,43 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-	'use strict';
+// document.addEventListener('DOMContentLoaded', init);
 
-	// Fetch all the forms we want to apply custom Bootstrap validation styles to
-	const forms = document.querySelectorAll('.needs-validation');
+// function init() {}
 
-	// Loop over them and prevent submission
-	Array.from(forms).forEach(form => {
-		form.addEventListener(
-			'submit',
-			event => {
-				if (!form.checkValidity()) {
-					event.preventDefault();
-					event.stopPropagation();
-				}
+function addEventListener() {
+	document
+		.getElementById('login-btn')
+		.addEventListener('click', handleLoginClick);
+	document
+		.getElementById('passwordPrepend')
+		.addEventListener('click', toggleHidePassword);
+}
 
-				form.classList.add('was-validated');
-			},
-			false
-		);
-	});
-})();
+function handleLoginClick(ev) {
+	ev.preventDefault();
+	ev.stopPropagation();
+
+	const { username, password } = getLoginValues();
+
+	console.log(username, password);
+}
+
+function getLoginValues() {
+	const username = document.getElementById('username').value;
+	const password = document.getElementById('password').value;
+
+	return { username, password };
+}
+
+function toggleHidePassword(ev) {
+	const passwordField = document.getElementById('password');
+	const passwordIcon = document.getElementById('password-icon');
+
+	if (passwordField.type === 'password') {
+		passwordField.type = 'text';
+		passwordIcon.classList.add('bi-eye');
+		passwordIcon.classList.remove('bi-eye-slash');
+	} else {
+		passwordField.type = 'password';
+		passwordIcon.classList.add('bi-eye-slash');
+		passwordIcon.classList.remove('bi-eye');
+	}
+}
