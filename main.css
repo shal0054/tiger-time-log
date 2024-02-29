@@ -24,6 +24,7 @@ form {
   display: flex;
   flex-direction: column;
   padding: 1.2rem 3rem;
+  font-family: 'Roboto', sans-serif;
 }
 
 label {
