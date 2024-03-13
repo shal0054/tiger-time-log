@@ -19,6 +19,9 @@ function handleLoginClick(ev) {
 	const { username, password } = getLoginValues();
 
 	console.log(username, password);
+	let baseUrl = window.location.href;
+	window.location.href = baseUrl += 'main.html';
+	console.log(baseUrl);
 }
 
 function getLoginValues() {

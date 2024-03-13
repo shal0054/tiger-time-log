@@ -1,11 +1,8 @@
 body {
-  /* display: flex; */
   margin: 0;
 }
 
 #login-mobile-side {
-  /* flex: 1;
-  border: 0.1rem solid gray; */
   height: 100vh;
   width: 100vw;
 }
@@ -13,7 +10,6 @@ body {
 #login-logo-mobile {
   margin: auto;
   padding: 3rem;
-  /* height: 8.5%; */
   width: 100%;
 }
 
@@ -75,10 +71,6 @@ button:active {
 
 #login-desktop-side {
   display: none;
-  /* display: flex;
-  flex-direction: column;
-  flex: 1.618;
-  height: 100vh; */
 }
 
 #dt-header-logo {
