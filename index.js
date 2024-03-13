@@ -1,14 +1,15 @@
-// document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', addEventListeners);
 
-// function init() {}
-
-function addEventListener() {
+function addEventListeners() {
 	document
 		.getElementById('login-btn')
 		.addEventListener('click', handleLoginClick);
 	document
 		.getElementById('passwordPrepend')
 		.addEventListener('click', toggleHidePassword);
+
+	// Listen for resize events
+	window.addEventListener('resize', checkScreenSize);
 }
 
 function handleLoginClick(ev) {
@@ -41,3 +42,21 @@ function toggleHidePassword(ev) {
 		passwordIcon.classList.remove('bi-eye');
 	}
 }
+
+///////////////////////////////////////
+
+// Function to check the screen size and add the appropriate class
+function checkScreenSize() {
+	const usernameDiv = document.getElementById('username-input-div');
+	const screenWidth = window.innerWidth;
+
+	// Add class based on screen width
+	if (screenWidth > 500) {
+		usernameDiv.classList.add('input-group');
+	} else {
+		usernameDiv.classList.remove('input-group');
+	}
+}
+
+// Call the function initially to set the correct class
+checkScreenSize();

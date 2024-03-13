@@ -1,23 +1,25 @@
 body {
-  display: flex;
+  /* display: flex; */
   margin: 0;
 }
 
 #login-mobile-side {
-  flex: 1;
-  border: 0.1rem solid gray;
+  /* flex: 1;
+  border: 0.1rem solid gray; */
   height: 100vh;
-  
+  width: 100vw;
 }
 
 #login-logo-mobile {
-  margin: 3rem;
-  height: 8.5%;
+  margin: auto;
+  padding: 3rem;
+  /* height: 8.5%; */
+  width: 100%;
 }
 
-p {
+#hint-text {
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
 }
 
 form {
@@ -33,6 +35,7 @@ label {
 
 input {
   height: 4rem;
+  
 }
 
 #usernamePrepend {
@@ -71,10 +74,11 @@ button:active {
 }
 
 #login-desktop-side {
-  display: flex;
+  display: none;
+  /* display: flex;
   flex-direction: column;
   flex: 1.618;
-  height: 100vh;
+  height: 100vh; */
 }
 
 #dt-header-logo {
@@ -84,4 +88,99 @@ button:active {
 
 #login-image {
   margin: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    display: flex;
+    margin: 0;
+  }
+
+  #login-mobile-side {
+    flex: 1;
+    border: 0.1rem solid gray;
+    height: 100vh;
+    
+  }
+
+  #login-logo-mobile {
+    margin: 3rem;
+    height: 8.5%;
+  }
+
+  p {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 1.2rem 3rem;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  label {
+    font-size: x-large;
+  }
+
+  input {
+    height: 4rem;
+    
+  }
+
+  #username {
+    text-align: right;
+  }
+
+  #usernamePrepend {
+    background-color: #FFF201;
+    height: 4rem;
+    font-size: x-large;
+  }
+
+  #passwordPrepend {
+    background-color: #FFF201;
+    height: 4rem;
+    width: 4rem;
+  }
+
+  #forgot-password {
+    text-align: right;
+    margin: 1rem 0;
+    font-size: larger;
+  }
+
+  button {
+    background-color: #FFF201;
+    border: none;
+    font-weight: 550;
+    height: 4rem;
+    box-shadow: 0 1rem 3rem rgba(191, 192, 16, 0.6);
+  }
+
+  button:hover {
+    scale: 1.05;
+  }
+
+  button:active {
+    background-color: #eee203;
+    scale: 1;
+  }
+
+  #login-desktop-side {
+    display: flex;
+    flex-direction: column;
+    flex: 1.618;
+    height: 100vh;
+  }
+
+  #dt-header-logo {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  #login-image {
+    margin: auto;
+  }
 }
