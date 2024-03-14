@@ -1,22 +1,24 @@
 document.addEventListener('DOMContentLoaded', addEventListeners);
 
-let dateP;
-
 function addEventListeners() {
-	dateP = document.getElementById('current-date');
-	timeP = document.getElementById('current-time');
+	const dateP = document.getElementById('current-date');
+	const timeElement = document.getElementById('current-time');
 
 	const date = new Date(Date.now());
 
 	dateP.innerHTML = date.toDateString();
 
-	const dt = new Date();
-
-	const time = dt.toLocaleString('en-US', {
-		hour: 'numeric',
-		minute: 'numeric',
-		hour12: true,
-	});
-
-	timeP.innerHTML = time;
+	function updateTime() {
+		const now = new Date();
+		const hours = now.getHours();
+		const minutes = now.getMinutes();
+		const seconds = now.getSeconds();
+		// Format the string with leading zeroes
+		const clockStr = `${hours.toString().padStart(2, '0')}:${minutes
+			.toString()
+			.padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+		timeElement.innerText = clockStr;
+	}
+	updateTime();
+	setInterval(updateTime, 1000);
 }
