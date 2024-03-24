@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Moul&display=swap');
+
+body {
+  padding: 2rem;
+}
+
+#current-date {
+  text-align: center;
+  font-size: x-large;
+}
+
+#clock {
+  text-align: center;
+  font-size: 15vw;
+  font-family: "Moul", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#clock span {
+  text-shadow: 0 0 80px #FFF201;
+  /* background: linear-gradient(to bottom, black, #79790f99); */
+  /* -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text; */
+} 
+
+/* #colon {
+  animation: fadeInOut 4s linear infinite;
+} */
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#button {
+  background-color: #FFF201;
+  box-shadow: 0 1rem 3rem #bfc01099;
+  text-align: center;
+  margin: auto;
+  border-radius: 50%;
+  height: 18rem;
+  line-height: 18rem;
+  width: 18rem; 
+
+  font-size: x-large;
+  font-family: "Moul", serif;
+  font-weight: 700;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  scale: 1.05;
+}
