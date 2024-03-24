@@ -17,11 +17,12 @@ function handleLoginClick(ev) {
 	ev.stopPropagation();
 
 	const { username, password } = getLoginValues();
-
 	console.log(username, password);
-	let baseUrl = window.location.href;
-	window.location.href = baseUrl += 'main.html';
-	console.log(baseUrl);
+
+	const url = window.location.href;
+	const baseUrl = url.split('/i')[0];
+	const newUrl = baseUrl + '/main.html';
+	window.location.href = newUrl;
 }
 
 function getLoginValues() {
